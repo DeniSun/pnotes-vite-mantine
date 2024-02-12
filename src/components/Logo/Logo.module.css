@@ -1,0 +1,6 @@
+.logo {
+    text-decoration: none;
+    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+    font-size: var(--mantine-font-size-xl);
+    font-weight: 500;
+}

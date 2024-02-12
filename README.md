@@ -1,4 +1,4 @@
-# Mantine Vite template
+# pnotes-vite-mantine (Mantine Vite template)
 
 ## Features
 

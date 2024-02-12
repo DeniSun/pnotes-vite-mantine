@@ -7,7 +7,8 @@ import { UserSettings } from '@/components/UserSettings/UserSettings';
 const links = [
   { link: '/home', label: 'Home' },
   { link: '/links', label: 'Links' },
-  { link: '/pricing', label: 'Pricing' },
+  { link: '/todo', label: 'TO DO' },
+  { link: '/questions', label: 'Questions' },
 ];
 
 export function SiteHeader() {

@@ -17,7 +17,7 @@
     "test": "npm run typecheck && npm run prettier && npm run lint && npm run vitest && npm run build",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
-    "json-server": "json-server --watch db.json "
+    "json-server": "json-server --watch db.json"
   },
   "dependencies": {
     "@mantine/core": "7.4.0",

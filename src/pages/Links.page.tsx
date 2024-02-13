@@ -1,3 +1,1 @@
-export const LinksPage = () => {
-  return <>Links</>;
-};
+export const LinksPage = () => <>Links</>;

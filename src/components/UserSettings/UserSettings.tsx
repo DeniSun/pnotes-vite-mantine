@@ -1,33 +1,34 @@
-import { Center, Group, Menu, UnstyledButton } from '@mantine/core';
-import { IconChevronsDown } from '@tabler/icons-react';
+import {Group, Menu, UnstyledButton} from '@mantine/core';
+import {IconChevronsDown} from '@tabler/icons-react';
+import {Link} from 'react-router-dom';
 
 import classes from './UserSettings.module.css';
 
 export const UserSettings = () => (
   <Group gap={5} visibleFrom="sm">
-    <a href="/reminder" className={classes.link}>
+      <Link to="/reminder" className={classes.link}>
       Reminder
-    </a>
-    <a href="/about" className={classes.link}>
+      </Link>
+      <Link to="/about" className={classes.link}>
       About
-    </a>
+      </Link>
     <Menu trigger="click-hover" withinPortal>
       <Menu.Target>
-        <Center>
-          <UnstyledButton className={classes.linkLabel}>User</UnstyledButton>
-          <IconChevronsDown size="0.9rem" stroke={1.5} />
-        </Center>
+          <UnstyledButton className={classes.link}>
+              User
+              <IconChevronsDown size="0.9rem" stroke={1.5} className={classes.linkIcon}/>
+          </UnstyledButton>
       </Menu.Target>
       <Menu.Dropdown>
         <Menu.Label>Settings</Menu.Label>
-        <Menu.Item component="a" href="/settings">
+          <Menu.Item component={Link} to="/settings">
           Settings
         </Menu.Item>
-        <Menu.Item component="a" href="/admin">
+          <Menu.Item component={Link} to="/admin">
           Admin
         </Menu.Item>
         <Menu.Divider />
-        <Menu.Item component="a" href="/logout">
+          <Menu.Item component={Link} to="/logout">
           Logout
         </Menu.Item>
       </Menu.Dropdown>

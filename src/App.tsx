@@ -1,16 +1,16 @@
+import { MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css';
-import {MantineProvider} from '@mantine/core';
-import {Router} from './pages/Router';
-import {theme} from './theme';
-import {Provider} from 'react-redux';
-import {store} from './Store/store';
+import { Provider } from 'react-redux';
+import { Router } from './pages/Router';
+import { store } from './Store/store';
+import { theme } from './theme';
 
 export default function App() {
   return (
-      <Provider store={store}>
-          <MantineProvider theme={theme}>
-              <Router/>
-          </MantineProvider>
-      </Provider>
+    <Provider store={store}>
+      <MantineProvider theme={theme}>
+        <Router />
+      </MantineProvider>
+    </Provider>
   );
 }

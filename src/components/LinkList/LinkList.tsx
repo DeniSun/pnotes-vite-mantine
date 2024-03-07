@@ -1,7 +1,27 @@
-import {useAppSelector} from '@/Store/hooks';
+import { useAppDispatch, useAppSelector } from '@/Store/hooks';
+import { FC, useEffect } from 'react';
+import { fetchLinkList } from './LinkListSlice';
 
-export const LinkList = () => {
-  const linkList = useAppSelector((state) => state.linkList.linkItems);
+export const LinkList: FC = () => {
+  const dispatch = useAppDispatch();
+  const linkList = useAppSelector((state) => state.linkList);
 
-  return <pre>{JSON.stringify(linkList, null, 2)}</pre>;
+  // let [tmp, setTmp] = useState<ILinkItem[]>([]);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const response = await getLinkList();
+  //     setTmp(response);
+  //   };
+  //   fetchData();
+  // }, []);
+
+  useEffect(() => {
+    dispatch(fetchLinkList());
+  }, []);
+
+  return (
+    <div>
+      <pre>{JSON.stringify(linkList, null, 4)}</pre>
+    </div>
+  );
 };

@@ -1,12 +1,10 @@
-import {configureStore} from '@reduxjs/toolkit';
 import LinkListSlice from '@/components/LinkList/LinkListSlice';
+import { configureStore } from '@reduxjs/toolkit';
 
 export const store = configureStore({
-    reducer: {
-        linkList: LinkListSlice,
-        //        comments: commentsReducer,
-        //        users: usersReducer,
-    },
+  reducer: {
+    linkList: LinkListSlice,
+  },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
